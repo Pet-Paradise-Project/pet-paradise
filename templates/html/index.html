@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <title>Home Page</title>
     <style>
       body {
@@ -15,6 +16,47 @@
     </style>
   </head>
   <body>
-    <h1>Hello</h1>
+    <!-- Navigation Bar Start -->
+    <section class="section-navbar">
+      <nav>
+        <div class="logo">
+          <a href="/"
+            ><img src="{% static 'images/PetParadise.svg' %}" alt="Logo Image"
+          /></a>
+        </div>
+        <div class="navbar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Care</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- Navigation Bar End -->
+
+    <!-- Header Start -->
+    <section class="section-header">
+      <div class="header">
+        <div class="header-details">
+          <h1>Find your <span>new</span><br />pet.</h1>
+          <p>
+            We help you find a pet that gives you lots of love and chat with
+            professional doctors for pet-related problems.
+          </p>
+          <div class="header-buttons">
+            <a href="/"><button>Adopt a pet</button></a>
+            <a href="/"><button>Chat</button></a>
+          </div>
+        </div>
+        <div class="header-image">
+          <img src="{% static 'images/animal-bg.svg' %}" alt="Animal Image" />
+        </div>
+      </div>
+    </section>
+    <!-- Header End -->
   </body>
 </html>
