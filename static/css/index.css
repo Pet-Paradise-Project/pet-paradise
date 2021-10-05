@@ -312,6 +312,7 @@ nav .navbar ul li a {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
 }
 
 .explore-animals .section-explore-animals {
@@ -379,6 +380,86 @@ nav .navbar ul li a {
 }
 
 .explore-animals .section-explore-animals .section-explore-animals-info a i {
+  font-size: 20px;
+  color: var(--main-color);
+}
+
+/* Our Offers Styling */
+
+.our-offers {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+}
+
+.our-offers .section-our-offers .section-our-offers-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.our-offers .section-our-offers .section-our-offers-title h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--main-dark-color);
+  margin-bottom: 20px;
+}
+
+.our-offers .section-our-offers .section-our-offers-images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.our-offers .section-our-offers .section-our-offers-images img {
+  width: 350px;
+}
+
+.our-offers .section-our-offers .section-our-offers-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 0 40px;
+  margin: 5px 10px 20px 0;
+}
+
+.our-offers .section-our-offers .section-our-offers-subtitle a {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  transition: all 0.3s ease;
+}
+
+.our-offers .section-our-offers .section-our-offers-subtitle h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.our-offers .section-our-offers .section-our-offers-subtitle a:hover {
+  background-color: var(--main-color);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  border: 1px solid #fff;
+}
+
+.our-offers .section-our-offers .section-our-offers-subtitle a:hover h3 {
+  color: #fff;
+}
+
+.our-offers .section-our-offers .section-our-offers-subtitle a h3 {
   font-size: 20px;
   color: var(--main-color);
 }
