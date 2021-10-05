@@ -9,9 +9,10 @@
     <title>Home Page</title>
     <style>
       body {
-        background: url(../static/images/background-5.jpg);
+        background: url(../static/images/body.svg);
         background-repeat: no-repeat;
-        background-size: cover;
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
@@ -38,25 +39,52 @@
     </section>
     <!-- Navigation Bar End -->
 
-    <!-- Header Start -->
-    <section class="section-header">
-      <div class="header">
-        <div class="header-details">
-          <h1>Find your <span>new</span><br />pet.</h1>
-          <p>
-            We help you find a pet that gives you lots of love and chat with
-            professional doctors for pet-related problems.
-          </p>
-          <div class="header-buttons">
-            <a href="/"><button>Adopt a pet</button></a>
-            <a href="/"><button>Chat</button></a>
+    <div class="main-content">
+      <!-- Header Start -->
+      <section class="section-header">
+        <div class="header">
+          <div class="header-details">
+            <h1><span>Find your </span>new<br /><span>pet.</span></h1>
+            <p>
+              We help you find a pet that gives you lots of love and chat with
+              professional doctors for pet-related problems.
+            </p>
+            <div class="header-buttons">
+              <a href="/"><button>Adopt a pet</button></a>
+              <a href="/"><button>Chat</button></a>
+            </div>
+          </div>
+          <div class="header-image">
+            <img src="{% static 'images/animal-bg.svg' %}" alt="Animal Image" />
           </div>
         </div>
-        <div class="header-image">
-          <img src="{% static 'images/animal-bg.svg' %}" alt="Animal Image" />
+      </section>
+      <!-- Header End -->
+
+      <!-- Section info start -->
+      <section class="section-info">
+        <div class="section-info-details">
+          <div class="details-first">
+            <h1><span>1500+</span> Total pets adopted</h1>
+            <div class="section-image">
+              <img
+                src="{% static 'images/graphic-1.svg' %}"
+                alt="First Image"
+              />
+            </div>
+          </div>
+          <div class="details-second">
+            <h1><span>700+</span>Available pets which need your love</h1>
+            <div class="section-image">
+              <img
+                src="{% static 'images/graphic-2.svg' %}"
+                alt="Second Image"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- Header End -->
+      </section>
+      <!-- Section info end -->
+    </div>
   </body>
 </html>
