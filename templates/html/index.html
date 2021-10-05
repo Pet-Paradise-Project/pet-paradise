@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <title>Home Page</title>
     <style>
@@ -32,7 +36,6 @@
             <li><a href="#">Care</a></li>
             <li><a href="#">Sign in</a></li>
             <li><a href="#">Sign up</a></li>
-            <li><a href="#">About</a></li>
           </ul>
         </div>
       </nav>
@@ -50,7 +53,7 @@
               professional doctors for pet-related problems.
             </p>
             <div class="header-buttons">
-              <a href="/"><button>Adopt a pet</button></a>
+              <a href="#pet-section"><button>Adopt a pet</button></a>
               <a href="/"><button>Chat</button></a>
             </div>
           </div>
@@ -85,6 +88,26 @@
         </div>
       </section>
       <!-- Section info end -->
+
+      <!-- pet section start -->
+      <section class="pet-section" id="pet-section">
+        <div class="pet-section-details">
+          <div class="pet-section-title">
+            <h1>Want to adopt a pet available near you?</h1>
+          </div>
+          <div class="pet-section-image">
+            <img src="{% static 'images/animal-1.png' %}" alt="Animal Image" />
+            <img src="{% static 'images/animal-2.png' %}" alt="Animal Image" />
+            <img src="{% static 'images/animal-3.png' %}" alt="Animal Image" />
+            <img src="{% static 'images/animal-4.png' %}" alt="Animal Image" />
+          </div>
+          <div class="pet-section-btn">
+            <h3>know more..</h3>
+            <a href="/"><i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- pet section end -->
     </div>
   </body>
 </html>

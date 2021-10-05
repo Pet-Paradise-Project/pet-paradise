@@ -71,8 +71,16 @@ nav .navbar ul li a {
 }
 
 nav .navbar ul li a:hover {
-  border-bottom: 1px solid var(--main-color);
-  color: var(--main-color);
+  animation: line 1s linear;
+  border-bottom: 2px solid var(--main-color);
+}
+@keyframes line {
+  from {
+    border-bottom: 0%;
+  }
+  to {
+    border-bottom: 100%;
+  }
 }
 
 nav .navbar ul li a {
@@ -144,17 +152,21 @@ nav .navbar ul li a {
   border-radius: 60px;
   border: none;
   margin-right: 60px;
-  background-color: var(--main-color);
-  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  color: var(--main-color);
+  font-weight: 500;
   font-size: 25px;
   cursor: pointer;
   transition: all 0.1s ease;
 }
 
 .section-header .header .header-details .header-buttons button:hover {
-  border: 1px solid var(--main-color);
-  background-color: #fff;
-  color: var(--main-color);
+  border: 1px solid #fff;
+  background-color: var(--main-color);
+  color: #fff;
 }
 
 /* Section info Styling */
@@ -192,6 +204,7 @@ nav .navbar ul li a {
 
 .section-info-details .details-first h1,
 .section-info-details .details-second h1 {
+  color: var(--main-dark-color);
   font-size: 30px;
   font-weight: 500;
 }
@@ -207,4 +220,83 @@ nav .navbar ul li a {
 .section-info-details .section-image img {
   height: 300px;
   width: 600px;
+}
+
+/* Pet Section Styling */
+
+.pet-section {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  margin-top: 50px;
+}
+
+.pet-section .pet-section-details .pet-section-title {
+  text-align: center;
+}
+
+.pet-section .pet-section-details .pet-section-title h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--main-dark-color);
+  margin-bottom: 20px;
+}
+
+.pet-section .pet-section-details .pet-section-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.pet-section .pet-section-details .pet-section-image img {
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.pet-section .pet-section-details .pet-section-btn {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pet-section .pet-section-details .pet-section-btn h3 {
+  margin-right: 10px;
+  color: var(--main-color);
+  font-size: 25px;
+}
+
+.pet-section .pet-section-details .pet-section-btn a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  transition: all 0.3s ease;
+}
+
+.pet-section .pet-section-details .pet-section-btn a:hover {
+  background-color: var(--main-color);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  border: 1px solid #fff;
+}
+
+.pet-section .pet-section-details .pet-section-btn a:hover i {
+  color: #fff;
+}
+
+.pet-section .pet-section-details .pet-section-btn a i {
+  font-size: 20px;
+  color: var(--main-color);
 }
