@@ -111,40 +111,6 @@ nav .navbar ul li a {
   color: var(--main-dark-color);
 }
 
-.create-top {
-  position: relative;
-  display: block;
-}
-
-.drop-list {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
-.drop-list li a {
-  padding: 15px 20px;
-  background: #fff;
-  border-radius: 30px;
-  margin-bottom: 5px;
-}
-.drop-list li a {
-  color: var(--main-color);
-  text-decoration: none;
-}
-.drop-list li:hover {
-  background-color: white;
-  border-radius: 30px;
-}
-.drop-list li:hover a {
-  color: #0d2c44;
-}
-
-.create-top:hover .drop-list {
-  display: block;
-}
-
 /* Header Styling */
 
 .main-content {

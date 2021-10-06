@@ -9,11 +9,12 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="shortcut icon" href="{% static 'images/PetParadise.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <title>Home Page</title>
     <style>
       body {
-        background: url(../static/images/body-1.svg);
+        background: url(../static/images/body.svg);
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
@@ -31,30 +32,13 @@
         </div>
         <div class="navbar">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#">Explore</a></li>
             <li>
-              <div class="create-top">
-                <span>Care</span>
-            <div class="drop-list">
-            <ul>
-              <li>
-                <a href="/" title="Food"
-                  >Food</a
-                >
-              </li>
-              <li>
-                <a href="/" title="Medicine">Medicine</a>
-              </li>
-              <li>
-                <a href="/" title="Product">Product</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+              <a href="#">Care</a>
             </li>
-            <li><a href="#">Sign in</a></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="/ownersignin">Pet-Owner</a></li>
+            <li><a href="/doctorsignin">Pet-Doctor</a></li>
           </ul>
         </div>
       </nav>
