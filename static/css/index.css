@@ -17,6 +17,23 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-dark-color);
+  border-radius: 10px;
+}
+
 /* Navbar Styling */
 
 .section-navbar {
@@ -68,23 +85,64 @@ nav .navbar ul li {
 
 nav .navbar ul li a {
   transition: all 0.3s ease;
+  position: relative;
 }
 
-nav .navbar ul li a:hover {
-  animation: line 1s linear;
-  border-bottom: 2px solid var(--main-color);
+nav .navbar ul li a:hover::before {
+  animation: line 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: var(--main-color);
+  height: 2px;
+  width: 100%;
 }
 @keyframes line {
   from {
-    border-bottom: 0%;
+    width: 0%;
   }
   to {
-    border-bottom: 100%;
+    width: 100%;
   }
 }
 
 nav .navbar ul li a {
   color: var(--main-dark-color);
+}
+
+.create-top {
+  position: relative;
+  display: block;
+}
+
+.drop-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.drop-list li a {
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 30px;
+  margin-bottom: 5px;
+}
+.drop-list li a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.drop-list li:hover {
+  background-color: white;
+  border-radius: 30px;
+}
+.drop-list li:hover a {
+  color: #0d2c44;
+}
+
+.create-top:hover .drop-list {
+  display: block;
 }
 
 /* Header Styling */
@@ -462,4 +520,132 @@ nav .navbar ul li a {
 .our-offers .section-our-offers .section-our-offers-subtitle a h3 {
   font-size: 20px;
   color: var(--main-color);
+}
+
+/* Footer styling */
+
+.footer-section {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+  padding: 20px 40px;
+}
+
+.footer-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.footer-section-container .footer-section-aboutus {
+  margin-right: 30px;
+}
+.footer-section-container .footer-section-aboutus {
+  width: 40%;
+}
+
+.footer-section-container h2 {
+  position: relative;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.footer-section-container h2:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: #fff;
+  height: 2px;
+  width: 50px;
+}
+
+footer p {
+  color: var(--main-dark-color);
+}
+
+.footer-section-socials {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer-section-socials li {
+  list-style: none;
+}
+
+.footer-section-socials li a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-section-socials li a:hover {
+  background: var(--main-color);
+}
+
+.footer-section-socials li a:hover i {
+  color: #fff;
+}
+
+.footer-section-socials li a .fa {
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.footer-section-contact {
+  width: calc(60% - 60px);
+  margin-right: 0 !important;
+}
+
+.footer-section-contact .footer-section-contact-info {
+  position: relative;
+}
+.footer-section-contact .footer-section-contact-info li {
+  align-items: center;
+  display: flex;
+  margin-bottom: 16px;
+}
+.footer-section-contact .fa {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.footer-section-contact .footer-section-contact-info li span {
+  color: var(--main-dark-color);
+}
+
+.footer-section-contact .footer-section-contact-info li a {
+  color: var(--main-dark-color);
+  text-decoration: none;
+}
+
+.footer-section-contact .footer-section-contact-info li a:hover {
+  color: white;
+}
+
+.copyrighttext {
+  width: 100%;
+  padding: 0 100px;
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 10px;
 }
