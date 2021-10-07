@@ -9,6 +9,7 @@ class petOwner(models.Model):
         upload_to='Images/', default='Images/user_profile1.png', null=True)
     contact = models.CharField(max_length=13, default='')
     user = models.OneToOneField(User, on_delete=models.CASCADE, default='')
+    email = models.EmailField()
     username = models.CharField(max_length=255, default='')
 
     def __str__(self):
@@ -21,6 +22,7 @@ class petDoctor(models.Model):
         upload_to='Images/', default='Images/user_profile1.png', null=True)
     contact = models.CharField(max_length=13, default='')
     user = models.OneToOneField(User, on_delete=models.CASCADE, default='')
+    email = models.EmailField()
     username = models.CharField(max_length=255, default='')
 
     def __str__(self):
