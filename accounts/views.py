@@ -19,3 +19,11 @@ def doctorsignin(request):
 
 def doctorsignup(request):
     return render(request, "doctorsignup.html")
+
+
+def explore(request):
+    return render(request, "explore.html")
+
+
+def care(request):
+    return render(request, "care.html")
