@@ -19,7 +19,7 @@
       href="{% static 'images/PetParadise.svg' %}"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="{% static 'css/signin.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" />
     <title>Sign in</title>
     <style>
       body {
@@ -36,7 +36,8 @@
       <div class="signin-container">
         <a href="/" class="sign-back-btn"><i class="fa fa-arrow-left"></i></a>
         <h1>REGISTER</h1>
-        <form action="/" class="signin-form">
+        <form method="post" action="/ownersignup" class="signin-form">
+          {% csrf_token %}
           <input
             type="text"
             id="yourname"
@@ -61,8 +62,8 @@
           />
           <input
             type="tel"
-            id="number"
-            name="number"
+            id="contact"
+            name="contact"
             placeholder="Number"
             required
           />
@@ -80,7 +81,7 @@
             placeholder="Confirm Password"
             required
           />
-          <a href="/"><button>SIGN UP</button></a>
+          <button type="submit">SIGN UP</button>
         </form>
         <h5>Already have an account? <a href="/ownersignin">Sign in!</a></h5>
       </div>

@@ -32,13 +32,21 @@
         </div>
         <div class="navbar">
           <ul>
+            {% if user.is_authenticated %}
+            <li><a href="" class="no-hover">Hi, {{user.username}}</a></li>
+            {% endif %}
             <li><a href="/">Home</a></li>
             <li><a href="/explore">Explore</a></li>
             <li>
               <a href="/care">Care</a>
             </li>
+            {% if user.is_authenticated %}
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
             <li><a href="/ownersignin">Pet-Owner</a></li>
             <li><a href="/doctorsignin">Pet-Doctor</a></li>
+            {% endif %}
           </ul>
         </div>
       </nav>
