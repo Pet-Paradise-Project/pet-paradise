@@ -9,5 +9,6 @@ urlpatterns = [
     path("doctorsignup", views.doctorsignup),
     path("explore", views.explore),
     path("care", views.care),
+    path("cat", views.cat),
     path("logout", views.logout),
 ]

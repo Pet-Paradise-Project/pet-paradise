@@ -167,3 +167,7 @@ def logout(request):
 #         pass
 #     else:
 #         user.delete()
+
+
+def cat(request):
+    return render(request, "cat.html")

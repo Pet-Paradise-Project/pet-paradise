@@ -71,22 +71,71 @@
           <img src="{% static 'images/dog-bg.jpg' %}" alt="Dog" />
         </div>
         <div class="search-container-content">
-          <h1>Find your pet animal breed</h1>
-          <form action="/" method="GET">
+          <h1>Find your pet animal type</h1>
+          <form action="/" method="GET" onsubmit="return false">
             <input
               type="search"
               placeholder="Search here"
               name="search_input"
+              id="input"
             />
             <div class="search-buttons">
-              <a href="/"><button class="submit-btn">By Type</button></a>
-              <button type="submit" class="submit-btn">Search</button>
+              <button onclick="window.location.href='#'+document.getElementById('input').value.toLowerCase()" type="submit" class="submit-btn">Search</button>
             </div>
           </form>
+          <a href="#types"><button class="submit-btn">By Type</button></a>
         </div>
       </div>
       <!-- Search end -->
 
+
+      <!-- Type Cards start -->
+      <div id="types" class="type-container">
+        <h1>Types</h1>
+        <div class="animal-type-cards">
+          <div id="cat" class="animal-card">
+            <img src="{% static 'images/card-cat.jpg'%}" alt="Cat">
+            <a href="/cat"><h2>Cat</h2></a>
+          </div>
+          <div id="pigeon" class="animal-card">
+            <img src="{% static 'images/card-pigeon.jpg'%}" alt="Pigeon">
+            <a href="/"><h2>Pigeon</h2></a>
+          </div>
+          <div id="parrot" class="animal-card">
+            <img src="{% static 'images/card-parrot.jpg'%}" alt="parrot">
+            <a href="/"><h2>Parrot</h2></a>
+          </div>
+          <div id="rabbit" class="animal-card">
+            <img src="{% static 'images/card-rabbit.jpg'%}" alt="rabbit">
+            <a href="/"><h2>Rabbit</h2></a>
+          </div>
+          <div id="hen" class="animal-card">
+            <img src="{% static 'images/card-hen.jpg'%}" alt="hen">
+            <a href="/"><h2>Hen</h2></a>
+          </div>
+          <div id="pig" class="animal-card">
+            <img src="{% static 'images/card-pig.jpg'%}" alt="pig">
+            <a href="/"><h2>Pig</h2></a>
+          </div>
+          <div id="goat" class="animal-card">
+            <img src="{% static 'images/card-goat.jpg'%}" alt="goat">
+            <a href="/"><h2>Goat</h2></a>
+          </div>
+          <div id="horse" class="animal-card">
+            <img src="{% static 'images/card-horse.jpg'%}" alt="horse">
+            <a href="/"><h2>Horse</h2></a>
+          </div>
+          <div id="dog" class="animal-card">
+            <img src="{% static 'images/card-dog.jpg'%}" alt="Dog">
+            <a href="/"><h2>Dog</h2></a>
+          </div>
+          <div id="cow" class="animal-card">
+            <img src="{% static 'images/card-cow.jpg'%}" alt="cow">
+            <a href="/"><h2>Cow</h2></a>
+          </div>
+        </div>
+      </div>
+      <!-- Type Cards end -->
 
 
     <!-- Footer start -->

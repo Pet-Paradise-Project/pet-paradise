@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Explore</title>
+    <style>
+      body {
+        background: url(../static/images/body-2.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <section class="section-navbar">
+      <nav>
+        <div class="logo">
+          <a href="/"
+            ><img src="{% static 'images/PetParadise.svg' %}" alt="Logo Image"
+          /></a>
+        </div>
+        <div class="navbar">
+          <ul>
+            {% if user.is_authenticated %}
+            <li><a href="" class="no-hover">Hi, {{user.username}}</a></li>
+            {% endif %}
+            <li><a href="/">Home</a></li>
+            <li><a href="/explore">Explore</a></li>
+            <li>
+              <a href="/care">Care</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/ownersignin">Pet-Owner</a></li>
+            <li><a href="/doctorsignin">Pet-Doctor</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- Navbar end -->
+
+    <div class="main-content">
+        <!-- Footer start -->
+        <footer class="footer-section">
+        <div class="footer-section-container">
+          <div class="footer-section-aboutus">
+            <h2>About us</h2>  
+            <p>
+              Pet Paradise is a startup by two engineering students dedicated for pet-lovers and animals so that we can connect them to each other and both get their deserved ones. 
+            </p>
+            <ul class="footer-section-socials">
+             <li><a target="_blank" href="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>    
+           </ul>
+          </div>
+          <div class="footer-section-contact">
+            <h2>Contact Info</h2>
+            <ul class="footer-section-contact-info">
+            <li>
+              <span>
+               <i class="fa fa-map-marker" aria-hidden="true"></i>   
+              </span> 
+              <span>
+                  Pet Paradise Headquarters<br> Shivaji nagar Street,<br> Ulsoor(E), Bangalore-560 007
+              </span> 
+            </li>
+            <li>
+              <span><i class="fa fa-phone" aria-hidden="true"></i></span>    
+              <p><a href="tel:9892662688">9892662688</p>   
+            </li>
+            <li>
+              <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <p><a href="mailto:support@petparadise.com">support@petparadise.com</a></p>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrighttext">
+          <p>©2021, All Rights Reserved by Pet Paradise</p>  
+        </div>  
+        </footer>
+        <!-- Footer end -->
+    </div>
+  </body>
+</html>

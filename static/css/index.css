@@ -661,6 +661,11 @@ footer p {
   margin-bottom: 20px;
 }
 
+.main-content .search-container .search-container-content a {
+  width: 100%;
+  padding: 0 90px;
+}
+
 .main-content .search-container .search-container-content form input {
   width: 500px;
   padding: 10px 20px;
@@ -699,4 +704,65 @@ footer p {
 .submit-btn:hover {
   color: #fff;
   background-color: var(--main-color);
+}
+
+.type-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  margin-bottom: 50px;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.type-container h1 {
+  color: var(--main-dark-color);
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.type-container .animal-type-cards {
+  /* flex: 0 0 100%; */
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.type-container .animal-type-cards .animal-card {
+  max-width: 50%;
+  margin: 30px;
+}
+
+.type-container .animal-type-cards .animal-card img {
+  width: 600px;
+  height: 480px;
+  border-radius: 15px;
+  background-size: cover;
+  margin-bottom: 5px;
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+}
+
+.type-container .animal-type-cards .animal-card h2 {
+  text-align: center;
+  line-height: 50px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  border-radius: 15px;
+  color: var(--main-dark-color);
+}
+
+.type-container .animal-type-cards .animal-card h2:hover {
+  background-color: var(--main-color);
+  color: #fff;
 }
