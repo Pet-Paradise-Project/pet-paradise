@@ -171,3 +171,7 @@ def logout(request):
 
 def cat(request):
     return render(request, "cat.html")
+
+
+def dog(request):
+    return render(request, "dog.html")
