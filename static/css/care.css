@@ -53,7 +53,7 @@ nav {
   align-items: center;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -132,7 +132,7 @@ nav .navbar ul li a {
   align-items: center;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -176,7 +176,7 @@ nav .navbar ul li a {
   border-radius: 60px;
   border: none;
   margin-right: 60px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
@@ -742,7 +742,7 @@ footer p {
 
 .type-container .animal-type-cards .animal-card img {
   width: 600px;
-  height: 440px;
+  height: 480px;
   border-radius: 15px;
   background-size: cover;
   margin-bottom: 5px;
@@ -850,4 +850,85 @@ footer p {
 
 .type-card-attribute-info .type-card-info h4 {
   margin-bottom: 5px;
+}
+
+/* Care page styling */
+
+.care-section {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.care-section .care-section-details .care-section-title {
+  text-align: center;
+}
+
+.care-section .care-section-details .care-section-title h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--main-dark-color);
+  margin-bottom: 20px;
+}
+
+.care-section .care-section-details .care-section-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.care-section .care-section-details .care-section-image img {
+  height: 250px;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.care-section .care-section-details .care-section-btn {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.care-section .care-section-details .care-section-btn h3 {
+  margin-right: 10px;
+  color: var(--main-color);
+  font-size: 25px;
+}
+
+.care-section .care-section-details .care-section-btn a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  transition: all 0.3s ease;
+}
+
+.care-section .care-section-details .care-section-btn a:hover {
+  background-color: var(--main-color);
+  box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
+  border: 1px solid #fff;
+}
+
+.care-section .care-section-details .care-section-btn a:hover i {
+  color: #fff;
+}
+
+.care-section .care-section-details .care-section-btn a i {
+  font-size: 20px;
+  color: var(--main-color);
 }

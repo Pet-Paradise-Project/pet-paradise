@@ -11,5 +11,8 @@ urlpatterns = [
     path("care", views.care),
     path("cat", views.cat),
     path("dog", views.dog),
+    path("food", views.food),
+    path("products", views.products),
+    path("medicine", views.medicine),
     path("logout", views.logout),
 ]

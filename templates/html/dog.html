@@ -20,7 +20,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-    <title>Explore</title>
+    <title>Explore | Dog</title>
     <style>
       body {
         background: url(../static/images/body-2.svg);
@@ -32,7 +32,7 @@
     </style>
   </head>
   <body>
-    <!-- Navbar Start -->
+    <!-- Navigation Bar Start -->
     <section class="section-navbar">
       <nav>
         <div class="logo">
@@ -45,23 +45,23 @@
             {% if user.is_authenticated %}
             <li><a href="" class="no-hover">Hi, {{user.username}}</a></li>
             {% endif %}
-            <li><a href="/">Home</a></li>
-            <li><a href="/explore">Explore</a></li>
+            <li><a href="/">Home🏠</a></li>
+            <li><a href="/explore">Explore🤯</a></li>
             <li>
-              <a href="/care">Care</a>
+              <a href="/care">Care😇</a>
             </li>
             {% if user.is_authenticated %}
             <li><a href="/">Dashboard</a></li>
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="/logout">Logout❕</a></li>
             {% else %}
-            <li><a href="/ownersignin">Pet-Owner</a></li>
-            <li><a href="/doctorsignin">Pet-Doctor</a></li>
+            <li><a href="/ownersignin">Pet-Owner😎</a></li>
+            <li><a href="/doctorsignin">Pet-Doctor🥼</a></li>
             {% endif %}
           </ul>
         </div>
       </nav>
     </section>
-    <!-- Navbar end -->
+    <!-- Navigation Bar End -->
 
     <div class="main-content">
 

@@ -19,11 +19,11 @@
       href="{% static 'images/PetParadise.svg' %}"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-    <title>Explore</title>
+    <link rel="stylesheet" href="{% static 'css/care.css' %}" />
+    <title>Care</title>
     <style>
       body {
-        background: url(../static/images/body.svg);
+        background: url(../static/images/body-1.svg);
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
@@ -65,80 +65,28 @@
 
     <div class="main-content">
 
-      <!-- Search Start -->
-      <div class="search-container">
-        <div class="search-container-image">
-          <img src="{% static 'images/dog-bg.jpg' %}" alt="Dog" />
-        </div>
-        <div class="search-container-content">
-          <h1>Find your pet animal type</h1>
-          <form action="/" method="GET" onsubmit="return false">
-            <input
-              type="search"
-              placeholder="Search here e.g. dog"
-              name="search_input"
-              id="input"
-            />
-            <div class="search-buttons">
-              <button onclick="window.location.href='#'+document.getElementById('input').value.toLowerCase()" type="submit" class="submit-btn">Search</button>
-            </div>
-          </form>
-          <a href="#types"><button class="submit-btn">By Type</button></a>
-        </div>
-      </div>
-      <!-- Search end -->
-
-
-      <!-- Type Cards start -->
-      <div id="types" class="type-container">
-        <h1>Types</h1>
-        <div class="animal-type-cards">
-          <div id="cat" class="animal-card">
-            <img src="{% static 'images/card-cat.jpg'%}" alt="Cat">
-            <a href="/cat"><h2>Cat</h2></a>
+      <!-- pet section start -->
+      <section class="care-section" id="care-section">
+        <div class="care-section-details">
+          <div class="care-section-title">
+            <h1>Food😋</h1>
           </div>
-          <div id="pigeon" class="animal-card">
-            <img src="{% static 'images/card-pigeon.jpg'%}" alt="Pigeon">
-            <a href="/"><h2>Pigeon</h2></a>
+          <div class="care-section-image">
+            <img src="{% static 'images/food-dog.jpeg' %}" alt="Animal Image" />
+            <img src="{% static 'images/food-cat.jpeg' %}" alt="Animal Image" />
+            <img src="{% static 'images/food-rabbit.jpeg' %}" alt="Animal Image" />
+            <img src="{% static 'images/food-pigeon.jpeg' %}" alt="Animal Image" />
           </div>
-          <div id="parrot" class="animal-card">
-            <img src="{% static 'images/card-parrot.jpg'%}" alt="parrot">
-            <a href="/"><h2>Parrot</h2></a>
-          </div>
-          <div id="rabbit" class="animal-card">
-            <img src="{% static 'images/card-rabbit.jpg'%}" alt="rabbit">
-            <a href="/"><h2>Rabbit</h2></a>
-          </div>
-          <div id="hen" class="animal-card">
-            <img src="{% static 'images/card-hen.jpg'%}" alt="hen">
-            <a href="/"><h2>Hen</h2></a>
-          </div>
-          <div id="pig" class="animal-card">
-            <img src="{% static 'images/card-pig.jpg'%}" alt="pig">
-            <a href="/"><h2>Pig</h2></a>
-          </div>
-          <div id="goat" class="animal-card">
-            <img src="{% static 'images/card-goat.jpg'%}" alt="goat">
-            <a href="/"><h2>Goat</h2></a>
-          </div>
-          <div id="horse" class="animal-card">
-            <img src="{% static 'images/card-horse.jpg'%}" alt="horse">
-            <a href="/"><h2>Horse</h2></a>
-          </div>
-          <div id="dog" class="animal-card">
-            <img src="{% static 'images/card-dog.jpg'%}" alt="Dog">
-            <a href="/dog"><h2>Dog</h2></a>
-          </div>
-          <div id="cow" class="animal-card">
-            <img src="{% static 'images/card-cow.jpg'%}" alt="cow">
-            <a href="/"><h2>Cow</h2></a>
+          <div class="care-section-btn">
+            <h3>know more..</h3>
+            <a href="/ownersignin"><i class="fa fa-arrow-right"></i></a>
           </div>
         </div>
-      </div>
-      <!-- Type Cards end -->
+      </section>
+      <!-- pet section end -->
 
 
-    <!-- Footer start -->
+      <!-- Footer start -->
     <footer class="footer-section">
       <div class="footer-section-container">
         <div class="footer-section-aboutus">
@@ -181,6 +129,7 @@
       </div>  
     </footer>
     <!-- Footer end -->
-  </div>
+    </div>
+    
   </body>
 </html>

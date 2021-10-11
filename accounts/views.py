@@ -175,3 +175,15 @@ def cat(request):
 
 def dog(request):
     return render(request, "dog.html")
+
+
+def food(request):
+    return render(request, "food.html")
+
+
+def products(request):
+    return render(request, "products.html")
+
+
+def medicine(request):
+    return render(request, "medicine.html")
