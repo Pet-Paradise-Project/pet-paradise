@@ -863,7 +863,6 @@ footer p {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 10px rgba(172, 132, 132, 0.3);
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -887,9 +886,16 @@ footer p {
 
 .care-section .care-section-details .care-section-image img {
   height: 250px;
-  background-size: cover;
+  /* width: 200px; */
+  background-size: contain;
   border-radius: 15px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.care-section .care-section-details .care-section-image img:hover {
+  transform: scale(1.1);
 }
 
 .care-section .care-section-details .care-section-btn {
