@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Explore | Dog</title>
+    <style>
+      body {
+        background: url(../static/images/body-2.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar Start -->
+    <section class="section-navbar">
+      <nav>
+        <div class="logo">
+          <a href="/"
+            ><img src="{% static 'images/PetParadise.svg' %}" alt="Logo Image"
+          /></a>
+        </div>
+        <div class="navbar">
+          <ul>
+            {% if user.is_authenticated %}
+            <li><a href="" class="no-hover">Hi, {{user.username}}</a></li>
+            {% endif %}
+            <li><a href="/">Home🏠</a></li>
+            <li><a href="/explore">Explore🤯</a></li>
+            <li>
+              <a href="/care">Care😇</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/logout">Logout❕</a></li>
+            {% else %}
+            <li><a href="/ownersignin">Pet-Owner😎</a></li>
+            <li><a href="/doctorsignin">Pet-Doctor🥼</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- Navigation Bar End -->
+
+    <div class="main-content">
+
+      <!-- Card type start -->
+      <div class="cat-type-cards">
+        <div class="type-card">
+          <img src="{% static 'images/dog-german-shepherd.jpg' %}" alt="Type Image">
+          <div class="type-card-content">
+            <h1>German Shepherd</h1>
+            <p>
+                The German Shepherd Dog has an outline of smooth curves on a longer than tall body that’s strong, agile, substantial, and an exceptionally outreaching and elastic gait, covering the ground in great strides. The breed’s dense, straight or slightly wavy double coat comprises harsh, close lying medium length hair.<br/> <br>
+              The average weight lies in between 22-32 kgs for male and 30-40 kgs for female. The average height lies in between 22 to 26 inches.
+            </p>
+          </div>
+        </div>
+        <div class="type-card-attribute">
+          <h3>Attributes</h3>
+          <div class="type-card-attribute-info">
+            <div class="type-card-info">
+              <h4>BODY</h4>
+              <p>Its hair, usually tan and black, or red and black in color, is medium in length and is shed all year round. Other rarer color variations include all-Black, all-White, liver and blue. The German Shepherd's body is long -- generally between 22 and 26 inches -- in proportion to its height.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>COLOR</h4>
+              <p>These dogs come in mostly dark colors like grey, sable, liver brown and combinations like red and black.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>COUNTRY OF ORIGIN</h4>
+              <p>They are primarily from Germany since 1899 and now are pet by people all around the world.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>TEMPERAMENT</h4>
+              <p>Among the most intelligent of breeds, the German Shepherd Dog is so intent on their mission—whatever that may be— that they are virtually unsurpassed in working versatility. They are utterly devoted and faithful.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>NOSE</h4>
+              <p>Their noses are extremely powerful and are therefore also used as police dogs for bomb and drug snigging.
+                  They have sniffing power 10,000 to 1,00,000 times better than us.
+              </p>
+            </div>
+            <div class="type-card-info">
+              <h4>OTHER NAMES</h4>
+              <p>These dogs are also called as mouthy-breeds, Alsatian and Deutscher Schaferhund.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>TAIL</h4>
+              <p> A standard German Shepherd tail length should be long enough that the tail end should reach the hock joint. It should be hanging with a slight curve like a cavalry sword when GSD is at rest. 
+              </p>
+            </div>
+            <div class="type-card-info">
+              <h4>MAJOR CONCERNS</h4>
+              <p>Many German Shepherds are found to have problems like CHD and elbow dysplasia.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Card type end -->
+
+        <!-- Footer start -->
+        <footer class="footer-section">
+        <div class="footer-section-container">
+          <div class="footer-section-aboutus">
+            <h2>About us</h2>  
+            <p>
+              Pet Paradise is a startup by two engineering students dedicated for pet-lovers and animals so that we can connect them to each other and both get their deserved ones. 
+            </p>
+            <ul class="footer-section-socials">
+             <li><a target="_blank" href="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>    
+           </ul>
+          </div>
+          <div class="footer-section-contact">
+            <h2>Contact Info</h2>
+            <ul class="footer-section-contact-info">
+            <li>
+              <span>
+               <i class="fa fa-map-marker" aria-hidden="true"></i>   
+              </span> 
+              <span>
+                  Pet Paradise Headquarters<br> Shivaji nagar Street,<br> Ulsoor(E), Bangalore-560 007
+              </span> 
+            </li>
+            <li>
+              <span><i class="fa fa-phone" aria-hidden="true"></i></span>    
+              <p><a href="tel:9892662688">9892662688</p>   
+            </li>
+            <li>
+              <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <p><a href="mailto:support@petparadise.com">support@petparadise.com</a></p>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrighttext">
+          <p>©2021, All Rights Reserved by Pet Paradise</p>  
+        </div>  
+        </footer>
+        <!-- Footer end -->
+    </div>
+  </body>
+</html>

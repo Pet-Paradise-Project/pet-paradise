@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Explore | Cat</title>
+    <style>
+      body {
+        background: url(../static/images/body-2.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar Start -->
+    <section class="section-navbar">
+      <nav>
+        <div class="logo">
+          <a href="/"
+            ><img src="{% static 'images/PetParadise.svg' %}" alt="Logo Image"
+          /></a>
+        </div>
+        <div class="navbar">
+          <ul>
+            {% if user.is_authenticated %}
+            <li><a href="" class="no-hover">Hi, {{user.username}}</a></li>
+            {% endif %}
+            <li><a href="/">Home🏠</a></li>
+            <li><a href="/explore">Explore🤯</a></li>
+            <li>
+              <a href="/care">Care😇</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/logout">Logout❕</a></li>
+            {% else %}
+            <li><a href="/ownersignin">Pet-Owner😎</a></li>
+            <li><a href="/doctorsignin">Pet-Doctor🥼</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- Navigation Bar End -->
+
+    <div class="main-content">
+
+      <!-- Card type start -->
+      <div class="cat-type-cards">
+        <div class="type-card">
+          <img src="{% static 'images/cat-american-bobtail.jpg' %}" alt="Type Image">
+          <div class="type-card-content">
+            <h1>American Bobtail</h1>
+            <p>
+              The American Bobtail is generally medium to large cat, with a naturally occurring bobbed tail. The American Bobtail is athletic and usually well-muscled with a sometimes powerful look. They possess a natural hunting gaze that combined with their body type, give American Bobtail a distinctive wild appearance.<br/> <br>
+              The average weight lies in between 3 to 7.5 kgs. The average height lies in between 9 to 10 inches.
+            </p>
+          </div>
+        </div>
+        <div class="type-card-attribute">
+          <h3>Physical Attributes</h3>
+          <div class="type-card-attribute-info">
+            <div class="type-card-info">
+              <h4>BODY</h4>
+              <p>Moderately long and substantial with a rectangular stance. Their chest is full and broad. They have slightly higher hips with prominent shoulder blades. They are often muscular and athletic in appearance.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>COLOR</h4>
+              <p>These cats come in all colors and combination of colors.  Their coat pattern sometimes enhance the natural wild appearance of this breed.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>HEAD</h4>
+              <p>Broad modified wedge, in proportion to the body. Their cheekbones are apparent. In profile they have a slightly concave curve between their nose and their brow with good length between their brow and ears. Their brow distinctive, evidenced by a slightly rounded forehead to eye ridge.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>EARS</h4>
+              <p>Medium; wide at base with slightly rounded tips, wide-set, upright with a slight outward tilt. Lighter colored thumbprints on the back of the ears may appear on all tabbies, including lynx points.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>EYES</h4>
+              <p>Large, almost almond in shape; deep set; outside corner angled slightly upward towards the ears. Medium-wide apart. Distinctive brow above the eye creates a top line to the eye and produces the their natural hunting gaze. Their eye color can be copper, gold, yellow, or green; blue in bi-color/van, colorpoint, lynxpoint, or oddeyed white cats.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>LEGS & PAWS</h4>
+              <p>In proportion to the body and of good length. Their paws large and round. Toe tufts may be seen in long-haired cats. They often have five toes in front and four in back.</p>
+            </div>
+            <div class="type-card-info">
+              <h4>TAIL</h4>
+              <p>Tail short, flexible and expressive; may be straight, slightly curved or kinked, or have bumps along length. Their tail tends to be broad at base, strong and substantial. Straighter tails exhibit fat pad at end of tail.
+              </p>
+            </div>
+            <div class="type-card-info">
+              <h4>COAT</h4>
+              <p>Length medium-longhair, slightly shaggy; tapering to slightly longer hair on their legs, belly and tail; ruff slight, mutton chops may sometimes be seen. Their coat’s texture is non-matting, resilient; density-double coat. Undercoat present, not extremely dense; with seasonal variations of coat.Their coat may be softer in texture in dilute colors, lynx points and silvers.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Card type end -->
+
+        <!-- Footer start -->
+        <footer class="footer-section">
+        <div class="footer-section-container">
+          <div class="footer-section-aboutus">
+            <h2>About us</h2>  
+            <p>
+              Pet Paradise is a startup by two engineering students dedicated for pet-lovers and animals so that we can connect them to each other and both get their deserved ones. 
+            </p>
+            <ul class="footer-section-socials">
+             <li><a target="_blank" href="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>    
+           </ul>
+          </div>
+          <div class="footer-section-contact">
+            <h2>Contact Info</h2>
+            <ul class="footer-section-contact-info">
+            <li>
+              <span>
+               <i class="fa fa-map-marker" aria-hidden="true"></i>   
+              </span> 
+              <span>
+                  Pet Paradise Headquarters<br> Shivaji nagar Street,<br> Ulsoor(E), Bangalore-560 007
+              </span> 
+            </li>
+            <li>
+              <span><i class="fa fa-phone" aria-hidden="true"></i></span>    
+              <p><a href="tel:9892662688">9892662688</p>   
+            </li>
+            <li>
+              <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <p><a href="mailto:support@petparadise.com">support@petparadise.com</a></p>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrighttext">
+          <p>©2021, All Rights Reserved by Pet Paradise</p>  
+        </div>  
+        </footer>
+        <!-- Footer end -->
+    </div>
+  </body>
+</html>

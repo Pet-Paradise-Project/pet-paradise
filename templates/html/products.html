@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/PetParadise.svg' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/care.css' %}" />
+    <title>Products</title>
+    <style>
+      body {
+        background: url(../static/images/body-1.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar Start -->
+    <section class="section-navbar">
+      <nav>
+        <div class="logo">
+          <a href="/"
+            ><img src="{% static 'images/PetParadise.svg' %}" alt="Logo Image"
+          /></a>
+        </div>
+        <div class="navbar">
+          <ul>
+            {% if user.is_authenticated %}
+            <li><a href="" class="no-hover">Hi, {{user.username}}</a></li>
+            {% endif %}
+            <li><a href="/">Home🏠</a></li>
+            <li><a href="/explore">Explore🤯</a></li>
+            <li>
+              <a href="/care">Care😇</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/logout">Logout❕</a></li>
+            {% else %}
+            <li><a href="/ownersignin">Pet-Owner😎</a></li>
+            <li><a href="/doctorsignin">Pet-Doctor🥼</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- Navigation Bar End -->
+
+    <div class="main-content">
+
+      <!-- pet section start -->
+      <section class="products-section" id="products-section">
+        <div class="products-section-details">
+          <div class="products-section-title">
+            <h1>Products⭐</h1>
+          </div>
+          <div class="products-section-image">
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/emily-pets-t-shirt-dog-cat/p/itma57814bbfaf6c?pid=PEAG5ZNMFGJ3TZWY&lid=LSTPEAG5ZNMFGJ3TZWYBW6DKU&marketplace=FLIPKART&q=dog+shirt&store=p3t%2Fea3%2F89f&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=2c614f02-e94c-45b0-933c-1c011fbb8157.PEAG5ZNMFGJ3TZWY.SEARCH&ppt=sp&ppn=sp&ssid=br2t23m5ow0000001633932130101&qH=7ad29818a4cea8ad" target="_blank"><img src="{% static 'images/product-dog.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/body-building-nylon-dog-belt-combo-black-red-ghungroo-collar-lead-1-5m-lengthy-leash/p/itmad80769043dba?pid=PCLFTBV5RVANGYCG&lid=LSTPCLFTBV5RVANGYCGVWWZRW&marketplace=FLIPKART&q=dog+belt&store=p3t%2Fea3%2Fb1n&srno=s_1_1&otracker=search&otracker1=search&fm=SEARCH&iid=151b9c0a-ee04-4948-a7f3-84d2e4ea0d2e.PCLFTBV5RVANGYCG.SEARCH&ppt=sp&ppn=sp&ssid=87smdy23i80000001633932250202&qH=d50ee726e671fbec" target="_blank"><img src="{% static 'images/product-dog-1.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/rk-products-dc31-m-pet-bed/p/itm2d2c8ff72c43a?pid=PEBFKN3SJGQTGDZN&lid=LSTPEBFKN3SJGQTGDZNYTWH2F&marketplace=FLIPKART&q=cat+products&store=p3t%2F0mo%2Fmg7&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_8_na_na_na&fm=SEARCH&iid=7e04d4be-aeae-48d7-b211-84eadbf1a66d.PEBFKN3SJGQTGDZN.SEARCH&ppt=sp&ppn=sp&ssid=93wagc18v40000001633932325052&qH=fe860721d438d16f" target="_blank"><img src="{% static 'images/product-cat.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/pet-life-organic-dry-bath-shampoo-small-pets-rabbits-kitten-dry-waterless-spray-made-natural-ingredients-cleaner-smoother-shinier-coat-whitening-color-enhancing-lemon-rabbit/p/itmcc8aa62bbad8e?pid=PSOG4CY7SQJ344FH&lid=LSTPSOG4CY7SQJ344FHZ4PSOX&marketplace=FLIPKART&q=rabbit+products&store=p3t%2Fixl%2Fosh&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=SEARCH&iid=6325f4aa-be78-4b4a-ace4-2f5c4150559c.PSOG4CY7SQJ344FH.SEARCH&ppt=sp&ppn=sp&ssid=yftxhtcl8w0000001633932394076&qH=0786f370647f9673" target="_blank"><img src="{% static 'images/product-rabbit.jpeg' %}" alt="Animal Image" /></a>
+            <a href="https://www.flipkart.com/jainsons-pet-products-grooming-brush-effectively-reduces-shedding-up-95-professional-deshedding-tool-dogs-cats-slicker-brushes-cat-dog/p/itm08e4f240e7432?pid=PCBG7A78UZM7WWFR&lid=LSTPCBG7A78UZM7WWFRTLMVPK&marketplace=FLIPKART&q=dog+products&store=p3t%2Fixl%2F770&srno=s_1_8&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=SEARCH&iid=43598321-d522-4328-a7f7-dcc1504c0967.PCBG7A78UZM7WWFR.SEARCH&ppt=sp&ppn=sp&ssid=61y3w0nps00000001633932470358&qH=74a168f2a6b7cd4d" target="_blank"><img src="{% static 'images/product-dog-2.jpeg' %}" alt="Animal Image" /></a>
+          </div>
+        </div>
+      </section>
+      <!-- pet section end -->
+
+
+      <!-- Footer start -->
+    <footer class="footer-section">
+      <div class="footer-section-container">
+        <div class="footer-section-aboutus">
+          <h2>About us</h2>  
+          <p>
+            Pet Paradise is a startup by two engineering students dedicated for pet-lovers and animals so that we can connect them to each other and both get their deserved ones. 
+          </p>
+          <ul class="footer-section-socials">
+           <li><a target="_blank" href="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+           <li><a target="_blank" href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+           <li><a target="_blank" href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+           <li><a target="_blank" href="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 
+           <li><a target="_blank" href="/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>    
+         </ul>
+        </div>
+        <div class="footer-section-contact">
+          <h2>Contact Info</h2>
+          <ul class="footer-section-contact-info">
+          <li>
+            <span>
+             <i class="fa fa-map-marker" aria-hidden="true"></i>   
+            </span> 
+            <span>
+                Pet Paradise Headquarters<br> Shivaji nagar Street,<br> Ulsoor(E), Bangalore-560 007
+            </span> 
+          </li>
+          <li>
+            <span><i class="fa fa-phone" aria-hidden="true"></i></span>    
+            <p><a href="tel:9892662688">9892662688</p>   
+          </li>
+          <li>
+            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <p><a href="mailto:support@petparadise.com">support@petparadise.com</a></p>
+          </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyrighttext">
+        <p>©2021, All Rights Reserved by Pet Paradise</p>  
+      </div>  
+    </footer>
+    <!-- Footer end -->
+    </div>
+    
+  </body>
+</html>

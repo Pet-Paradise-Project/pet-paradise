@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="{% static 'images/PetParadise.svg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Welcome to Pet Paradise!</title>
+    <style>
+      body {
+        background: url(../static/images/body-2.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar Start -->
+    <section class="section-navbar">
+      <nav>
+        <div class="logo">
+          <a href="/"
+            ><img src="{% static 'images/PetParadise.svg' %}" alt="Logo Image"
+          /></a>
+        </div>
+        <div class="navbar">
+          <ul>
+            {% if user.is_authenticated %}
+            <li><a href="" class="no-hover">Hi, {{user.username}}</a></li>
+            {% endif %}
+            <li><a href="/">Home🏠</a></li>
+            <li><a href="/explore">Explore🤯</a></li>
+            <li>
+              <a href="/care">Care😇</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/logout">Logout❕</a></li>
+            {% else %}
+            <li><a href="/ownersignin">Pet-Owner😎</a></li>
+            <li><a href="/doctorsignin">Pet-Doctor🥼</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!-- Navigation Bar End -->
+
+    <div class="main-content">
+      <!-- Header Start -->
+      <section class="section-header">
+        <div class="header">
+          <div class="header-details">
+            <h1><span>Find your </span>new<br /><span>pet.</span></h1>
+            <p>
+              We help you find a pet that gives you lots of love and chat with
+              professional doctors for pet-related problems.
+            </p>
+            <div class="header-buttons">
+              <a href="#pet-section"><button>Adopt a pet</button></a>
+              <a href="/ownersignin"><button>Chat</button></a>
+            </div>
+          </div>
+          <div class="header-image">
+            <img src="{% static 'images/animal-bg.svg' %}" alt="Animal Image" />
+          </div>
+        </div>
+      </section>
+      <!-- Header End -->
+
+      <!-- Section info start -->
+      <section class="section-info">
+        <div class="section-info-details">
+          <div class="details-first">
+            <h1><span>1500+</span> Total pets adopted</h1>
+            <div class="section-image">
+              <img
+                src="{% static 'images/graphic-1.svg' %}"
+                alt="First Image"
+              />
+            </div>
+          </div>
+          <div class="details-second">
+            <h1><span>700+</span>Available pets which need your love</h1>
+            <div class="section-image">
+              <img
+                src="{% static 'images/graphic-2.svg' %}"
+                alt="Second Image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section info end -->
+
+      <!-- pet section start -->
+      <section class="pet-section" id="pet-section">
+        <div class="pet-section-details">
+          <div class="pet-section-title">
+            <h1>Want to adopt a pet available near you?</h1>
+          </div>
+          <div class="pet-section-image">
+            <img src="{% static 'images/animal-1.png' %}" alt="Animal Image" />
+            <img src="{% static 'images/animal-2.png' %}" alt="Animal Image" />
+            <img src="{% static 'images/animal-3.png' %}" alt="Animal Image" />
+            <img src="{% static 'images/animal-4.png' %}" alt="Animal Image" />
+          </div>
+          <div class="pet-section-btn">
+            <h3>know more..</h3>
+            <a href="/ownersignin"><i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- pet section end -->
+
+      <!-- Explore animals start -->
+      <section class="explore-animals">
+        <div class="section-explore-animals">
+          <div class="section-explore-animals-image">
+            <img
+              src="{% static 'images/graphic-3.svg' %}"
+              alt="Graphic Image"
+            />
+          </div>
+          <div class="section-explore-animals-info">
+            <h1>Explore about animals</h1>
+            <p>
+              Want to know about animals, how to train them, how to take care,
+              how their behaviour is in general, <br />
+              click to know more...
+            </p>
+            <a href="/explore"><i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- Explore animals end -->
+
+      <!-- Our offers start -->
+      <section class="our-offers">
+        <div class="section-our-offers">
+          <div class="section-our-offers-title">
+            <h1>What we have for your pet?</h1>
+          </div>
+          <div class="section-our-offers-images">
+            <img src="{% static 'images/offer-1.png' %}" alt="offer Image" />
+            <img src="{% static 'images/offer-3.png' %}" alt="offer Image" />
+            <img src="{% static 'images/offer-2.png' %}" alt="offer Image" />
+          </div>
+          <div class="section-our-offers-subtitle">
+            <a href="/care"><h3>Food</h3></a>
+            <a href="/care"><h3>Health</h3></a>
+            <a href="/care"><h3>Products</h3></a>
+          </div>
+        </div>
+      </section>
+      <!-- Our offers end -->
+
+      <!-- Footer start -->
+      <footer class="footer-section">
+        <div class="footer-section-container">
+          <div class="footer-section-aboutus">
+            <h2>About us</h2>  
+            <p>
+              Pet Paradise is a startup by two engineering students dedicated for pet-lovers and animals so that we can connect them to each other and both get their deserved ones. 
+            </p>
+            <ul class="footer-section-socials">
+             <li><a target="_blank" href="/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 
+             <li><a target="_blank" href="/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>    
+           </ul>
+          </div>
+          <div class="footer-section-contact">
+            <h2>Contact Info</h2>
+            <ul class="footer-section-contact-info">
+            <li>
+              <span>
+               <i class="fa fa-map-marker" aria-hidden="true"></i>   
+              </span> 
+              <span>
+                  Pet Paradise Headquarters<br> Shivaji nagar Street,<br> Ulsoor(E), Bangalore-560 007
+              </span> 
+            </li>
+            <li>
+              <span><i class="fa fa-phone" aria-hidden="true"></i></span>    
+              <p><a href="tel:9892662688">9892662688</p>   
+            </li>
+            <li>
+              <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <p><a href="mailto:support@petparadise.com">support@petparadise.com</a></p>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyrighttext">
+          <p>©2021, All Rights Reserved by Pet Paradise</p>  
+        </div>  
+      </footer>
+      <!-- Footer end -->
+    </div>
+  </body>
+</html>
