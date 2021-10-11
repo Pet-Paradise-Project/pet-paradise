@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from chat.models import Message
 from chat.serializers import MessageSerializer, UserSerializer
+from rest_framework.parsers import JSONParser
 
 
 @csrf_exempt
@@ -25,9 +26,7 @@ def message_list(request, sender=None, receiver=None):
         return JsonResponse(serializer.data, safe=False)
 
     elif request.method == "POST":
-        # data = JSONParser().parse(request)
-        # data = json.loads(request)
-        data = "Hello, i am here"
+        data = JSONParser().parse(request)
         serializer = MessageSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
@@ -59,6 +58,6 @@ def message_view(request, sender, receiver):
                 "messages": Message.objects.filter(
                     sender_id=sender, receiver_id=receiver
                 )
-                | Message.objects.filter(sender_id=receiver, receiver_id=sender),
+                # | Message.objects.filter(sender_id=receiver, receiver_id=sender),
             },
         )

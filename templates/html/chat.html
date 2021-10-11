@@ -1,7 +1,7 @@
 {% extends 'index1.html' %} {% block body %}
 <nav class="blue lighten-3">
   <div class="nav-wrapper container">
-    <a href="#" class="brand-logo">Chat</a>
+    <a href="#" class="brand-logo">Your Chats</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="">{{ request.user.username }}</a></li>
       <li>
@@ -21,10 +21,6 @@
             id="user{{ user.id }}"
             class="collection-item row"
           >
-            <img
-              src="https://frontend-1.adjust.com/new-assets/images/site-images/interface/user.svg"
-              class="col s4"
-            />
             <div class="col s8">
               <span class="title" style="font-weight: bolder"
                 >{{ user.username }}</span
@@ -85,7 +81,6 @@
   $(function () {
     scrolltoend();
     $("#chat-box").on("submit", function (event) {
-      event.preventDefault();
       var message = $("#id_message");
       send(
         "{{ request.user.username }}",

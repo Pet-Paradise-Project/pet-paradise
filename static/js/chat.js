@@ -10,8 +10,7 @@ function scrolltoend() {
 }
 
 function send(sender, receiver, message) {
-    $.post('/api/messages/', '{"sender": "'+ sender +'", "receiver": "'+ receiver +'","message": "'+ message +'" }', function (data) {
-        console.log(data);
+    $.post('/chat/api/messages/', '{"sender": "'+ sender +'", "receiver": "'+ receiver +'","message": "'+ message +'" }', function (data) {
         var box = text_box.replace('{sender}', "You");
         box = box.replace('{message}', message);
         $('#board').append(box);
@@ -20,8 +19,7 @@ function send(sender, receiver, message) {
 }
 
 function receive() {
-    $.get('/api/messages/'+ sender_id + '/' + receiver_id, function (data) {
-        console.log(data);
+    $.get('/chat/api/messages/'+ sender_id + '/' + receiver_id, function (data) {
         if (data.length !== 0)
         {
             for(var i=0;i<data.length;i++) {

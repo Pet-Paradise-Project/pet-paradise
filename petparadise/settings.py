@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "accounts",
     "widget_tweaks",
     "chat",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
