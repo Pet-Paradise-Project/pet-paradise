@@ -24,7 +24,6 @@ def message_list(request, sender=None, receiver=None):
             message.is_read = True
             message.save()
         return JsonResponse(serializer.data, safe=False)
-
     elif request.method == "POST":
         data = JSONParser().parse(request)
         serializer = MessageSerializer(data=data)
@@ -47,7 +46,7 @@ def chat_view(request):
 
 def message_view(request, sender, receiver):
     if not request.user.is_authenticated:
-        return redirect("index")
+        return redirect("/")
     if request.method == "GET":
         return render(
             request,
@@ -58,6 +57,19 @@ def message_view(request, sender, receiver):
                 "messages": Message.objects.filter(
                     sender_id=sender, receiver_id=receiver
                 )
-                # | Message.objects.filter(sender_id=receiver, receiver_id=sender),
+                | Message.objects.filter(sender_id=receiver, receiver_id=sender),
+            },
+        )
+    elif request.method == "POST":
+        return render(
+            request,
+            "messages.html",
+            {
+                "users": User.objects.exclude(username=request.user.username),
+                "receiver": User.objects.get(id=receiver),
+                "messages": Message.objects.filter(
+                    sender_id=sender, receiver_id=receiver
+                )
+                | Message.objects.filter(sender_id=receiver, receiver_id=sender),
             },
         )

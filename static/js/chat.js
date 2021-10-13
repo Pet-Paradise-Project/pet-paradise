@@ -10,6 +10,7 @@ function scrolltoend() {
 }
 
 function send(sender, receiver, message) {
+    console.log("Message is :" + message);
     $.post('/chat/api/messages/', '{"sender": "'+ sender +'", "receiver": "'+ receiver +'","message": "'+ message +'" }', function (data) {
         var box = text_box.replace('{sender}', "You");
         box = box.replace('{message}', message);
@@ -17,7 +18,7 @@ function send(sender, receiver, message) {
         scrolltoend();
     })
 }
-
+ 
 function receive() {
     $.get('/chat/api/messages/'+ sender_id + '/' + receiver_id, function (data) {
         if (data.length !== 0)
